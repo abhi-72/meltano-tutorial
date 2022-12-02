@@ -1,0 +1,35 @@
+{
+  "plugin_type": "loaders",
+  "name": "target-mongodb",
+  "namespace": "target_mongodb",
+  "variant": "hotgluexyz",
+  "label": "MongoDB",
+  "docs": "https://hub.meltano.com/loaders/target-mongodb--hotgluexyz",
+  "repo": "https://gitlab.com/hotglue/target-mongodb",
+  "pip_url": "git+https://gitlab.com/hotglue/target-mongodb.git",
+  "description": "General purpose, document-based, distributed database.",
+  "logo_url": "https://hub.meltano.com/assets/logos/loaders/mongodb.png",
+  "capabilities": [
+    "about"
+  ],
+  "settings_group_validation": [
+    [
+      "connection_string",
+      "db_name"
+    ]
+  ],
+  "settings": [
+    {
+      "name": "connection_string",
+      "kind": "password",
+      "label": "Connection String",
+      "description": "Connection string in the format mongodb://[${MONGO_USERNAME:${MONGO_PASSWORD}@]mongodb0.example.com:PORT"
+    },
+    {
+      "name": "db_name",
+      "kind": "string",
+      "label": "Database Name",
+      "description": "Name of the target db inside your mongoDB"
+    }
+  ]
+}
